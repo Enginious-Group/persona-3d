@@ -1,0 +1,13 @@
+gameFbxExporter;
+setAttr -type "string" gameExporterPreset1.exportPath "D:\\Persona\\FBX";
+setAttr "gameExporterPreset1.inputConnections" 0;
+setAttr "gameExporterPreset1.embedMedia" 0;
+setAttr "gameExporterPreset1.blendshapes" 0;
+setAttr "gameExporterPreset1.exportAnimation" 1;
+setAttr -type "string" gameExporterPreset1.exportFilename "wrappedHead_v001";
+gameExp_CreateFilenamePreview;
+setAttr gameExporterPreset1.exportSetIndex 2; gameExp_CreateExportTypeUIComponents;
+setAttr "gameExporterPreset1.upAxis" 2; gameExp_CreateExportTypeUIComponents;
+optionMenu -q -select model_gameExporterExportSet;
+
+gameExp_DoExport;

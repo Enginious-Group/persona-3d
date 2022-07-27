@@ -6,7 +6,7 @@ import os
 enter_wrapped_mesh_name = "baked_new_topology:Mesh"
 
 #Enter folder path below where additional scripts are stored. Do not change slash to forward slash
-folder_path = "D:\\Persona\\Maya\\metahuman_rig_transfer-python-2"
+folder_path = "D:\\persona-3d\\metahuman_rig_transfer-python-2"
 python_folder_path = folder_path.replace("\\", "/")
 
 #Alright lets go
@@ -16,11 +16,14 @@ cmds.select( clear=True )
 cmds.duplicate('DHIhead:spine_04')
 
 def select_loop_bones():
+    enter_wrapped_mesh_name = "baked_new_topology:Mesh"
+    folder_path = "D:\\persona-3d\\metahuman_rig_transfer-python-2"
+    python_folder_path = folder_path.replace("\\", "/")
     from maya import cmds
     import maya.api.OpenMaya as om
     import os 
 
-
+    
     #giving OG and old mesh a variable name//edit mesh name here
     cmds.select('head_lod0_mesh')
     ogmesh = cmds.ls( selection=True )
